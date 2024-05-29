@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-^z)g2@gk45khev+g5$53vs238ca0t()%c=oio&#q)ppm6ha-^)'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -22,9 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gameapp',
     'blogapp',
-    'shopapp',
     'debug_toolbar'
 ]
 
