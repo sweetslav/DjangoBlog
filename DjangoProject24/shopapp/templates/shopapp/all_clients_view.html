@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Все клиенты{% endblock %}
+
+{% block content %}
+    <h1>Все клиенты</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Почта</th>
+                <th>Телефон</th>
+                <th>Адрес</th>
+                <th>Дата регистрации</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in clients %}
+            <tr>
+                <td>{{ client.id }}</td>
+                <td>{{ client.name }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.phone }}</td>
+                <td>{{ client.address }}</td>
+                <td>{{ client.date_registered }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

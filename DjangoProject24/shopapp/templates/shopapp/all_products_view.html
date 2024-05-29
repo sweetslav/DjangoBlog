@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Все товары{% endblock %}
+
+{% block content %}
+    <h1>Все товары</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Дата добавления</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td><a href="{% url 'edit_product' product.id %}">{{ product.name }}</a></td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.date_added }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
